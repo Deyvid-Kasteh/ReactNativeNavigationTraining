@@ -1,0 +1,1 @@
+import { naviga} from '@react-navigation/native'
