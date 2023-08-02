@@ -4,11 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import NavigationMain from "./NavigationMain";
 
 export default function App() {
-  return (
-
-      <NavigationMain />
-
-  );
+  return </>
 }
 
 const styles = StyleSheet.create({

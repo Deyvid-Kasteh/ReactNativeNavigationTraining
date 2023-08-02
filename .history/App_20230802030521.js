@@ -5,8 +5,8 @@ import NavigationMain from "./NavigationMain";
 
 export default function App() {
   return (
-
-      <NavigationMain />
+    
+      <NavigationMain />;
 
   );
 }
