@@ -44,40 +44,13 @@ function TabGroup() {
           options={{
             tabBarIcon: ({ focused, size, color }) => {
               if (focused) {
-                return (
-                  <Ionicons
-                    name="notifications-sharp"
-                    size={24}
-                    color="black"
-                  />
-                );
+                return <AntDesign name="pluscircle" size={24} color="black" />;
               }
-              return (
-                <Ionicons
-                  name="notifications-outline"
-                  size={24}
-                  color="black"
-                />
-              );
+              return <AntDesign name="pluscircleo" size={24} color="black" />;
             },
           }}
         />
-        <Tab.Screen
-          name="Settings"
-          component={Settings}
-          options={{
-            tabBarIcon: ({ focused, size, color }) => {
-              if (focused) {
-                return (
-                  <Ionicons name="settings-sharp" size={24} color="black" />
-                );
-              }
-              return (
-                <Ionicons name="settings-outline" size={24} color="black" />
-              );
-            },
-          }}
-        />
+        <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     );
 }

@@ -38,46 +38,8 @@ function TabGroup() {
             },
           }}
         />
-        <Tab.Screen
-          name="Notifications"
-          component={Notifications}
-          options={{
-            tabBarIcon: ({ focused, size, color }) => {
-              if (focused) {
-                return (
-                  <Ionicons
-                    name="notifications-sharp"
-                    size={24}
-                    color="black"
-                  />
-                );
-              }
-              return (
-                <Ionicons
-                  name="notifications-outline"
-                  size={24}
-                  color="black"
-                />
-              );
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Settings"
-          component={Settings}
-          options={{
-            tabBarIcon: ({ focused, size, color }) => {
-              if (focused) {
-                return (
-                  <Ionicons name="settings-sharp" size={24} color="black" />
-                );
-              }
-              return (
-                <Ionicons name="settings-outline" size={24} color="black" />
-              );
-            },
-          }}
-        />
+        <Tab.Screen name="Notifications" component={Notifications} />
+        <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     );
 }
