@@ -19,7 +19,8 @@ function TabGroup() {
 export default function Navigation() {
     return (
         <NavigationContainer>
-            <TabGroup/>
+            <Feed/>
+
         </NavigationContainer>
     )
 }
