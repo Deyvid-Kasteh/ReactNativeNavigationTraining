@@ -9,12 +9,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
-
-
-
-
-// Bottom Tab
-
 const Tab = createBottomTabNavigator();
 function TabGroup() {
   return (
@@ -22,14 +16,13 @@ function TabGroup() {
       screenOptions={() => ({
         tabBarActiveTintColor: "black",
         tabBarInactiveTintColor: "gray",
-        tabBarShowLabel: true,
       })}
     >
       <Tab.Screen
         name="Feed"
         component={Feed}
         options={{
-          tabBarIcon: ({ focused,  }) => {
+          tabBarIcon: ({ focused, size,  }) => {
             if (focused) {
               return <Ionicons name="logo-twitter" size={24} />;
             }
@@ -42,7 +35,7 @@ function TabGroup() {
         name="AddTweet"
         component={AddTweet}
         options={{
-          tabBarIcon: ({ focused,  }) => {
+          tabBarIcon: ({ focused, size, color }) => {
             if (focused) {
               return <AntDesign name="pluscircle" size={24} />;
             }
@@ -54,7 +47,7 @@ function TabGroup() {
         name="Notifications"
         component={Notifications}
         options={{
-          tabBarIcon: ({ focused,  }) => {
+          tabBarIcon: ({ focused, size, color }) => {
             if (focused) {
               return <Ionicons name="notifications-sharp" size={24} />;
             }
@@ -66,11 +59,11 @@ function TabGroup() {
         name="Settings"
         component={Settings}
         options={{
-          tabBarIcon: ({ focused,  }) => {
+          tabBarIcon: ({ focused, size, color }) => {
             if (focused) {
-              return <Ionicons name="settings-sharp" size={24} />;
+              return <Ionicons name="settings-sharp" size={24}  />;
             }
-            return <Ionicons name="settings-outline" size={24} />;
+            return <Ionicons name="settings-outline" size={24}  />;
           },
         }}
       />

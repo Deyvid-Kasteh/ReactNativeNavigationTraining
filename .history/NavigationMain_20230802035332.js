@@ -13,8 +13,7 @@ import { AntDesign } from "@expo/vector-icons";
 
 
 
-// Bottom Tab
-
+Bottom Tab
 const Tab = createBottomTabNavigator();
 function TabGroup() {
   return (

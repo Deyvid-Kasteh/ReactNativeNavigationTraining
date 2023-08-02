@@ -9,12 +9,6 @@ import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
-
-
-
-
-// Bottom Tab
-
 const Tab = createBottomTabNavigator();
 function TabGroup() {
   return (
