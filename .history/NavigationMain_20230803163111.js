@@ -100,7 +100,7 @@ function Stack_Tab_Group() {
 export default function NavigationMain() {
   return (
     <NavigationContainer>
-      <Bottom_Tab_Group />
+      <TabGroup />
     </NavigationContainer>
   );
 }

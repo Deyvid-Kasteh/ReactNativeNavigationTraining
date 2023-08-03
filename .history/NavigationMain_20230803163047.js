@@ -19,7 +19,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Bottom Tab
 const Bottom_Tab = createBottomTabNavigator();
-function Bottom_Tab_Group() {
+function TabGroup() {
   return (
     <Bottom_Tab.Navigator
       screenOptions={() => ({
@@ -100,7 +100,7 @@ function Stack_Tab_Group() {
 export default function NavigationMain() {
   return (
     <NavigationContainer>
-      <Bottom_Tab_Group />
+      <TabGroup />
     </NavigationContainer>
   );
 }

@@ -19,7 +19,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 // Bottom Tab
 const Bottom_Tab = createBottomTabNavigator();
-function Bottom_Tab_Group() {
+function TabGroup() {
   return (
     <Bottom_Tab.Navigator
       screenOptions={() => ({
@@ -54,7 +54,7 @@ function Bottom_Tab_Group() {
           },
         }}
       />
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="Notifications"
         component={Notifications}
         options={{
@@ -66,7 +66,7 @@ function Bottom_Tab_Group() {
           },
         }}
       />
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="Settings"
         component={Settings}
         options={{
@@ -84,23 +84,23 @@ function Bottom_Tab_Group() {
 
 
 // Native-Stack
-const Stack_Tab = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
-function Stack_Tab_Group() {
+function MyStack() {
   return (
-    <Stack_Tab.Navigator>
-      {/* <Stack_Tab.Screen name="Home" component={Home} /> */}
-      {/* <Stack_Tab.Screen name="Notifications" component={Notifications} /> */}
-      {/* <Stack_Tab.Screen name="Profile" component={Profile} /> */}
-      {/* <Stack_Tab.Screen name="Settings" component={Settings} /> */}
-    </Stack_Tab.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Notifications" component={Notifications} />
+      <Stack.Screen name="Profile" component={Profile} />
+      <Stack.Screen name="Settings" component={Settings} />
+    </Stack.Navigator>
   );
 }
 
 export default function NavigationMain() {
   return (
     <NavigationContainer>
-      <Bottom_Tab_Group />
+      <TabGroup />
     </NavigationContainer>
   );
 }

@@ -8,20 +8,13 @@ import Settings from "./screens/BottomTab/Settings";
 import { Ionicons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-
-
-
-
-
-
 
 // Bottom Tab
-const Bottom_Tab = createBottomTabNavigator();
-function Bottom_Tab_Group() {
+
+const Tab = createBottomTabNavigator();
+function TabGroup() {
   return (
-    <Bottom_Tab.Navigator
+    <Tab.Navigator
       screenOptions={() => ({
         tabBarActiveTintColor: "black",
         tabBarInactiveTintColor: "gray",
@@ -29,7 +22,7 @@ function Bottom_Tab_Group() {
         tabBarIconStyle: { color: "yellow" },
       })}
     >
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="Feed"
         component={Feed}
         options={{
@@ -42,7 +35,7 @@ function Bottom_Tab_Group() {
         }}
       />
 
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="AddTweet"
         component={AddTweet}
         options={{
@@ -54,7 +47,7 @@ function Bottom_Tab_Group() {
           },
         }}
       />
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="Notifications"
         component={Notifications}
         options={{
@@ -66,7 +59,7 @@ function Bottom_Tab_Group() {
           },
         }}
       />
-      <Bottom_Tab.Screen
+      <Tab.Screen
         name="Settings"
         component={Settings}
         options={{
@@ -78,29 +71,14 @@ function Bottom_Tab_Group() {
           },
         }}
       />
-    </Bottom_Tab.Navigator>
-  );
-}
-
-
-// Native-Stack
-const Stack_Tab = createNativeStackNavigator();
-
-function Stack_Tab_Group() {
-  return (
-    <Stack_Tab.Navigator>
-      {/* <Stack_Tab.Screen name="Home" component={Home} /> */}
-      {/* <Stack_Tab.Screen name="Notifications" component={Notifications} /> */}
-      {/* <Stack_Tab.Screen name="Profile" component={Profile} /> */}
-      {/* <Stack_Tab.Screen name="Settings" component={Settings} /> */}
-    </Stack_Tab.Navigator>
+    </Tab.Navigator>
   );
 }
 
 export default function NavigationMain() {
   return (
     <NavigationContainer>
-      <Bottom_Tab_Group />
+      <TabGroup />
     </NavigationContainer>
   );
 }
