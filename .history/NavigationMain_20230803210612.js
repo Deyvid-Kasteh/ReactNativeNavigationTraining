@@ -22,8 +22,8 @@ const Drawer_tab = createDrawerNavigator();
 function Drawer_tab_Group() {
   return (
     <Drawer_tab.Navigator screenOptions={{ headerShown: false }}>
-      <Drawer_tab.Screen name="Home" component={Bottom_Tab_Group} />
       <Drawer_tab.Screen name="Drawer1" component={Drawer1} />
+      <Drawer_tab.Screen name="Home" component={Bottom_Tab_Group} />
       <Drawer_tab.Screen name="Drawer2" component={Drawer2} />
       <Drawer_tab.Screen name="Drawer3" component={Drawer3} />
       <Drawer_tab.Screen name="Drawer4" component={Drawer4} />

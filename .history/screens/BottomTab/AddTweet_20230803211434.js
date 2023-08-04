@@ -1,15 +1,9 @@
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { useLayoutEffect } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  Image,
-} from "react-native";
 
-const Settings = () => {
+const AddTweet = () => {
+
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
@@ -28,28 +22,20 @@ const Settings = () => {
   }, []);
 
 
-
-
-
   return (
     <View style={styles.container}>
-      <Text>Settings</Text>
+      <Text>AddTweet</Text>
     </View>
   );
 };
 
-export default Settings;
+export default AddTweet;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7a7a7a",
+    backgroundColor: "#2bff00",
     justifyContent: "center",
     alignItems: "center",
-  },
-  profileImage: {
-    width: 45,
-    height: 45,
-    borderRadius: 100,
   },
 });

@@ -1,13 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-  Pressable,
-  Image,
-} from "react-native";
+import { SafeAreaView, StyleSheet, Text, View, Pressable, Image } from "react-native";
 
 export default function Feed() {
   const navigation = useNavigation();
@@ -15,7 +8,7 @@ export default function Feed() {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => (
-        <Pressable onPress={() => navigation.openDrawer()}>
+        <Pressable onPress={()=> navigation.openDrawer}>
           <Image
             style={styles.profileImage}
             source={{
@@ -27,23 +20,26 @@ export default function Feed() {
     });
   }, []);
 
-  return (
-    <View style={styles.container}>
-      <Text>Feed</Text>
-      <Image
-        style={styles.profileImage}
-        source={{
-          uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
-        }}
-      />
-      <Image
-        style={styles.profileImage}
-        source={{
-          uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
-        }}
-      />
-    </View>
-  );
+
+
+
+    return (
+      <View style={styles.container}>
+        <Text>Feed</Text>
+        <Image
+          style={styles.profileImage}
+          source={{
+            uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
+          }}
+        />
+        <Image
+          style={styles.profileImage}
+          source={{
+            uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
+          }}
+        />
+      </View>
+    );
 }
 
 const styles = StyleSheet.create({
@@ -56,6 +52,7 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 45,
     height: 45,
-    borderRadius: 100,
+    borderRadius: 100
   },
+  // style={{width: '100%', height: '50%'}}
 });

@@ -47,9 +47,4 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  profileImage: {
-    width: 45,
-    height: 45,
-    borderRadius: 100,
-  },
 });

@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 
-const Settings = () => {
+const Notifications = () => {
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
@@ -30,26 +30,20 @@ const Settings = () => {
 
 
 
-
   return (
     <View style={styles.container}>
-      <Text>Settings</Text>
+      <Text>Notifications</Text>
     </View>
   );
 };
 
-export default Settings;
+export default Notifications;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7a7a7a",
+    backgroundColor: "#ffd000",
     justifyContent: "center",
     alignItems: "center",
-  },
-  profileImage: {
-    width: 45,
-    height: 45,
-    borderRadius: 100,
   },
 });

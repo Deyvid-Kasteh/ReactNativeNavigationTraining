@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 
-const Settings = () => {
+export default function Feed() {
   const navigation = useNavigation();
 
   useLayoutEffect(() => {
@@ -27,23 +27,29 @@ const Settings = () => {
     });
   }, []);
 
-
-
-
-
   return (
     <View style={styles.container}>
-      <Text>Settings</Text>
+      <Text>Feed</Text>
+      <Image
+        style={styles.profileImage}
+        source={{
+          uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
+        }}
+      />
+      <Image
+        style={styles.profileImage}
+        source={{
+          uri: "https://avatars.githubusercontent.com/u/99744584?s=96&v=4",
+        }}
+      />
     </View>
   );
-};
-
-export default Settings;
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#7a7a7a",
+    backgroundColor: "#0099ff",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -52,4 +58,5 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: 100,
   },
+  // style={{width: '100%', height: '50%'}}
 });

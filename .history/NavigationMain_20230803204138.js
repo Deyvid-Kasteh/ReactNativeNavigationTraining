@@ -10,27 +10,24 @@ import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Drawer1 from "./screens/DrawerTab/Drawer1";
-import Drawer2 from "./screens/DrawerTab/Drawer2";
-import Drawer3 from "./screens/DrawerTab/Drawer3";
-import Drawer4 from "./screens/DrawerTab/Drawer4";
-import Drawer5 from "./screens/DrawerTab/Drawer5";
+
 
 // Drawer Tab
-const Drawer_tab = createDrawerNavigator();
+const Drawer = createDrawerNavigator();
 
-function Drawer_tab_Group() {
+function Drawer_tab
+  () {
   return (
-    <Drawer_tab.Navigator screenOptions={{ headerShown: false }}>
-      <Drawer_tab.Screen name="Home" component={Bottom_Tab_Group} />
-      <Drawer_tab.Screen name="Drawer1" component={Drawer1} />
-      <Drawer_tab.Screen name="Drawer2" component={Drawer2} />
-      <Drawer_tab.Screen name="Drawer3" component={Drawer3} />
-      <Drawer_tab.Screen name="Drawer4" component={Drawer4} />
-      <Drawer_tab.Screen name="Drawer5" component={Drawer5} />
-    </Drawer_tab.Navigator>
+    <Drawer.Navigator>
+      <Drawer.Screen name="Feed" component={Feed} />
+      <Drawer.Screen name="Article" component={Article} />
+    </Drawer.Navigator>
   );
 }
+
+
+
+
 
 // Bottom Tab
 const Bottom_Tab = createBottomTabNavigator();
@@ -97,6 +94,7 @@ function Bottom_Tab_Group() {
   );
 }
 
+
 // Native-Stack
 const Stack_Tab = createNativeStackNavigator();
 
@@ -114,7 +112,7 @@ function Stack_Tab_Group() {
 export default function NavigationMain() {
   return (
     <NavigationContainer>
-      <Drawer_tab_Group />
+      <Bottom_Tab_Group />
     </NavigationContainer>
   );
 }
